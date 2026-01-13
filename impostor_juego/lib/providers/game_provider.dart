@@ -134,6 +134,37 @@ class GameProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // --- GAMEPLAY ACTIONS ---
+
+  void eliminatePlayer(String playerId) {
+    if (_currentSession == null) return;
+
+    final index = _currentSession!.players.indexWhere((p) => p.id == playerId);
+    if (index != -1) {
+      _currentSession!.players[index].isAlive = false;
+      if (isMultiplayer && isHost) _broadcastState();
+      notifyListeners();
+    }
+  }
+
+  // Returns true if game is over
+  bool checkWinCondition() {
+    if (_currentSession == null) return false;
+
+    final alivePlayers =
+        _currentSession!.players.where((p) => p.isAlive).toList();
+    final impostors = alivePlayers.where((p) => p.role == Role.impostor).length;
+    final citizens = alivePlayers.length - impostors;
+
+    // Condition 1: Citizens win if 0 impostors left
+    if (impostors == 0) return true;
+
+    // Condition 2: Impostor wins if Impostors >= Citizens (1v1 is win for impostor usually)
+    if (impostors >= citizens) return true;
+
+    return false;
+  }
+
   // --- NETWORK HANDLING ---
 
   void _broadcastState() {

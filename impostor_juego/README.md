@@ -1,16 +1,26 @@
-# impostor_juego
+# Juego del Impostor
 
-A new Flutter project.
+Este es un juego multijugador local (o en un solo dispositivo) inspirado en juegos sociales de deducción. Desarrollado en Flutter.
 
-## Getting Started
+## 🚀 Características
+- **Modo Un Dispositivo**: Pasa el teléfono entre los jugadores.
+- **Modo Multijugador Local**: Conecta varios dispositivos vía WiFi.
+- **Votación e Interacción**: Sistema completo de votación y eliminación.
+- **Categorías**: Múltiples temas de palabras divertidas.
 
-This project is a starting point for a Flutter application.
+## 📄 Licencia y Uso
 
-A few resources to get you started if this is your first Flutter project:
+Este proyecto es **Software Libre y Gratuito**.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Tienes la libertad de:
+- Usar el código para fines personales o educativos.
+- Modificar el código.
+- Distribuir copias del código.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**BAJO LA SIGUIENTE CONDICIÓN:**
+Queda terminantemente **PROHIBIDO PRIVATIZAR** este código. Cualquier trabajo derivado, modificación o distribución debe mantenerse bajo una licencia libre y abierta (Copyleft). No puedes tomar este código, cerrarlo y venderlo como un producto propietario sin liberar el código fuente.
+
+Este software se distribuye bajo la licencia **GNU General Public License v3.0 (GPLv3)**. Consulta el archivo `LICENSE` para más detalles.
+
+---
+Hecho con ❤️ en Flutter.
